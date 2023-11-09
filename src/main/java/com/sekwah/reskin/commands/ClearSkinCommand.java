@@ -21,7 +21,7 @@ public class ClearSkinCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 
         // Thing to note, arguments are handled in alphabetical order.
-        LiteralArgumentBuilder<CommandSourceStack> setSkin = literal("clearskin")
+        LiteralArgumentBuilder<CommandSourceStack> setSkin = literal("batclearskin")
                 .requires((sender) -> (!SkinConfig.SELF_SKIN_NEEDS_OP.get() || sender.hasPermission(2)))
                 .executes(ctx -> {
                     ServerPlayer entity = ctx.getSource().getPlayerOrException();
