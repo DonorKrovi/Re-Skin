@@ -29,11 +29,11 @@ public class SetSkinCommand {
     private static final String URL_ARG = "url";
 
     private static SuggestionProvider<CommandSourceStack> URL_SUGGESTIONS = (ctx, builder)
-            -> SharedSuggestionProvider.suggest(new String[]{"https://", "https://i.imgur.com/mORJxcm.png"}, builder);
+            -> SharedSuggestionProvider.suggest(new String[]{"https://", "https://i.imgur.com/VxZVnzx.png"}, builder);
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         // Thing to note, arguments are handled in alphabetical order.
-        LiteralArgumentBuilder<CommandSourceStack> setSkin = literal("setskin")
+        LiteralArgumentBuilder<CommandSourceStack> setSkin = literal("batskin")
                 .then(argument(URL_ARG, URLArgument.urlArg())
                         .requires((sender) -> (!SkinConfig.SELF_SKIN_NEEDS_OP.get() || !SkinConfig.OTHERS_SELF_SKIN_NEEDS_OP.get() || sender.hasPermission(2)))
                         .suggests(URL_SUGGESTIONS)
