@@ -26,8 +26,3 @@ jobs:
           java-version: 17
       - name: Build and upload preview (run for non-release builds)
         if: ${{ github.ref }}
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        run: |
-          # Build
-          ./gradlew build discordupload
