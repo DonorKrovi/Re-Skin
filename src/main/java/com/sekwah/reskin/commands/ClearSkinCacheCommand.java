@@ -19,7 +19,7 @@ public class ClearSkinCacheCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 
         // Thing to note, arguments are handled in alphabetical order.
-        LiteralArgumentBuilder<CommandSourceStack> clear = literal("clearskincache").executes(ClearSkinCacheCommand::run);
+        LiteralArgumentBuilder<CommandSourceStack> clear = literal("batkincache").executes(ClearSkinCacheCommand::run);
 
         dispatcher.register(clear);
     }
@@ -28,7 +28,7 @@ public class ClearSkinCacheCommand {
         try {
             PacketHandler.sendToPlayer(new ClientClearSkinCache(), ctx.getSource().getPlayerOrException());
         } catch (CommandSyntaxException e) {
-            ReSkin.LOGGER.info("This command can only be run from the console");
+            ReSkin.LOGGER.info("Только Дезовару");
         }
         ctx.getSource().sendSuccess(() -> Component.translatable("setskin.clearedcache"), false);
         return Command.SINGLE_SUCCESS;
