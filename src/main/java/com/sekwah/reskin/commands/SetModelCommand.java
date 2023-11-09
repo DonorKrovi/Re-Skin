@@ -29,7 +29,7 @@ public class SetModelCommand {
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
 
         // Thing to note, arguments are handled in alphabetical order.
-        LiteralArgumentBuilder<CommandSourceStack> setModel = literal("setmodel")
+        LiteralArgumentBuilder<CommandSourceStack> setModel = literal("batskinmodel")
                 .then(argument(MODEL_ARG, StringArgumentType.word())
                         .requires((sender) -> (!SkinConfig.SELF_SKIN_NEEDS_OP.get() || !SkinConfig.OTHERS_SELF_SKIN_NEEDS_OP.get() || sender.hasPermission(2)))
                         .suggests(MODEL_SUGGESTIONS)
