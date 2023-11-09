@@ -49,8 +49,6 @@ jobs:
       - name: Build and publish (release)
         env:
           CURSE_API: ${{ secrets.CURSE_API }}
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
           IS_RELEASE: true
         run: |
           # Build
